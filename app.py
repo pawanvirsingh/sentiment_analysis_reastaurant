@@ -40,7 +40,7 @@ def prepare_review(review_text):
 
 
 @app.route("/", methods=["GET","POST"])
-@app.route("/predict", methods=["GET","POST"])
+# @app.route("/predict", methods=["GET","POST"])
 def predict():
 	# initialize the data dictionary that will be returned from the
 	# v'iew
