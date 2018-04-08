@@ -12,7 +12,7 @@ nltk.download('stopwords')
 from nltk.corpus import stopwords
 # initialize our Flask application and the Keras model
 app = flask.Flask(__name__)
-model = load_model()
+model = None
 corpus = None
 def load_model():
 	# load the pre-trained Keras model (here we are using a model
@@ -54,7 +54,7 @@ def predict():
 			return flask.render_template("index.html")
 
 		if flask.request.method == "POST":
-
+			load_model()
 			if flask.request.form.get("review_text"):
 			# if True:
 				# read the image in PIL format
