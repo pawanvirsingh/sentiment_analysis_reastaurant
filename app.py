@@ -12,7 +12,7 @@ nltk.download('stopwords')
 from nltk.corpus import stopwords
 # initialize our Flask application and the Keras model
 app = flask.Flask(__name__)
-model = None
+model = load_model()
 corpus = None
 def load_model():
 	# load the pre-trained Keras model (here we are using a model
